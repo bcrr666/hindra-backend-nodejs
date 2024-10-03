@@ -1,0 +1,28 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: subastop
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: hindra
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: hindra
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+plugins:
+  - serverless-offline
+
+functions:
+  listPlanets:
+    handler: handler.listPlanets
+    events:
+      - httpApi:
+          path: /planets
+          method: get
+
+  findPlanetById:
+    handler: handler.findPlanetById
+    events:
+      - httpApi:
+          path: /planets/{id}
+          method: get          
