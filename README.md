@@ -222,9 +222,9 @@ La busqueda consta de 1 campo necesario:
 }
 ```
 
-## Documentacion - Especies
+## Documentacion - Planetas
 
-### Busqueda de especies
+### Busqueda de Planetas
 La busqueda consta de 1 campo necesario:
 
 * id
@@ -238,37 +238,314 @@ La busqueda consta de 1 campo necesario:
 `200 Success`
 ```js
 {
-    "message": "Informacion de la especie",
-    "data": {
-        "altura_promedio": "n/a",
-        "promedio_vida": "indefinite",
-        "clasificacion": "artificial",
-        "creado_en": "2014-12-10T15:16:16.259000Z",
-        "designación": "sentient",
-        "editado_en": "2014-12-20T21:36:42.139000Z",
-        "color_ojos": "n/a",
-        "color_pelo": "n/a",
-        "mundo_natal": null,
-        "idioma": "n/a",
-        "gente": [
-            "https://swapi.py4e.com/api/people/2/",
-            "https://swapi.py4e.com/api/people/3/",
-            "https://swapi.py4e.com/api/people/8/",
-            "https://swapi.py4e.com/api/people/23/",
-            "https://swapi.py4e.com/api/people/87/"
-        ],
-        "peliculas": [
-            "https://swapi.py4e.com/api/films/1/",
-            "https://swapi.py4e.com/api/films/2/",
-            "https://swapi.py4e.com/api/films/3/",
-            "https://swapi.py4e.com/api/films/4/",
-            "https://swapi.py4e.com/api/films/5/",
-            "https://swapi.py4e.com/api/films/6/",
-            "https://swapi.py4e.com/api/films/7/"
-        ],
-        "color_piel": "n/a",
-        "enlace": "https://swapi.py4e.com/api/species/2/"
-    }
+    "message": "Listado de planetas",
+    "data": [
+        {
+            "clima": "arid",
+            "creado": "2014-12-09T13:50:49.641000Z",
+            "diametro": "10465",
+            "editado": "2014-12-20T20:58:18.411000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/1/",
+                "https://swapi.py4e.com/api/films/3/",
+                "https://swapi.py4e.com/api/films/4/",
+                "https://swapi.py4e.com/api/films/5/",
+                "https://swapi.py4e.com/api/films/6/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Tatooine",
+            "periodo_orbital": "304",
+            "poblacion": "200000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/1/",
+                "https://swapi.py4e.com/api/people/2/",
+                "https://swapi.py4e.com/api/people/4/",
+                "https://swapi.py4e.com/api/people/6/",
+                "https://swapi.py4e.com/api/people/7/",
+                "https://swapi.py4e.com/api/people/8/",
+                "https://swapi.py4e.com/api/people/9/",
+                "https://swapi.py4e.com/api/people/11/",
+                "https://swapi.py4e.com/api/people/43/",
+                "https://swapi.py4e.com/api/people/62/"
+            ],
+            "periodo_de_rotacion": "23",
+            "agua_superficial": "1",
+            "terreno": "desert",
+            "url": "https://swapi.py4e.com/api/planets/1/"
+        },
+        {
+            "clima": "temperate",
+            "creado": "2014-12-10T11:35:48.479000Z",
+            "diametro": "12500",
+            "editado": "2014-12-20T20:58:18.420000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/1/",
+                "https://swapi.py4e.com/api/films/6/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Alderaan",
+            "periodo_orbital": "364",
+            "poblacion": "2000000000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/5/",
+                "https://swapi.py4e.com/api/people/68/",
+                "https://swapi.py4e.com/api/people/81/"
+            ],
+            "periodo_de_rotacion": "24",
+            "agua_superficial": "40",
+            "terreno": "grasslands, mountains",
+            "url": "https://swapi.py4e.com/api/planets/2/"
+        },
+        {
+            "clima": "temperate, tropical",
+            "creado": "2014-12-10T11:37:19.144000Z",
+            "diametro": "10200",
+            "editado": "2014-12-20T20:58:18.421000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/1/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Yavin IV",
+            "periodo_orbital": "4818",
+            "poblacion": "1000",
+            "residentes": [],
+            "periodo_de_rotacion": "24",
+            "agua_superficial": "8",
+            "terreno": "jungle, rainforests",
+            "url": "https://swapi.py4e.com/api/planets/3/"
+        },
+        {
+            "clima": "frozen",
+            "creado": "2014-12-10T11:39:13.934000Z",
+            "diametro": "7200",
+            "editado": "2014-12-20T20:58:18.423000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/2/"
+            ],
+            "gravedad": "1.1 standard",
+            "nombre": "Hoth",
+            "periodo_orbital": "549",
+            "poblacion": "unknown",
+            "residentes": [],
+            "periodo_de_rotacion": "23",
+            "agua_superficial": "100",
+            "terreno": "tundra, ice caves, mountain ranges",
+            "url": "https://swapi.py4e.com/api/planets/4/"
+        },
+        {
+            "clima": "murky",
+            "creado": "2014-12-10T11:42:22.590000Z",
+            "diametro": "8900",
+            "editado": "2014-12-20T20:58:18.425000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/2/",
+                "https://swapi.py4e.com/api/films/3/",
+                "https://swapi.py4e.com/api/films/6/"
+            ],
+            "gravedad": "N/A",
+            "nombre": "Dagobah",
+            "periodo_orbital": "341",
+            "poblacion": "unknown",
+            "residentes": [],
+            "periodo_de_rotacion": "23",
+            "agua_superficial": "8",
+            "terreno": "swamp, jungles",
+            "url": "https://swapi.py4e.com/api/planets/5/"
+        },
+        {
+            "clima": "temperate",
+            "creado": "2014-12-10T11:43:55.240000Z",
+            "diametro": "118000",
+            "editado": "2014-12-20T20:58:18.427000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/2/"
+            ],
+            "gravedad": "1.5 (surface), 1 standard (Cloud City)",
+            "nombre": "Bespin",
+            "periodo_orbital": "5110",
+            "poblacion": "6000000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/26/"
+            ],
+            "periodo_de_rotacion": "12",
+            "agua_superficial": "0",
+            "terreno": "gas giant",
+            "url": "https://swapi.py4e.com/api/planets/6/"
+        },
+        {
+            "clima": "temperate",
+            "creado": "2014-12-10T11:50:29.349000Z",
+            "diametro": "4900",
+            "editado": "2014-12-20T20:58:18.429000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/3/"
+            ],
+            "gravedad": "0.85 standard",
+            "nombre": "Endor",
+            "periodo_orbital": "402",
+            "poblacion": "30000000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/30/"
+            ],
+            "periodo_de_rotacion": "18",
+            "agua_superficial": "8",
+            "terreno": "forests, mountains, lakes",
+            "url": "https://swapi.py4e.com/api/planets/7/"
+        },
+        {
+            "clima": "temperate",
+            "creado": "2014-12-10T11:52:31.066000Z",
+            "diametro": "12120",
+            "editado": "2014-12-20T20:58:18.430000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/3/",
+                "https://swapi.py4e.com/api/films/4/",
+                "https://swapi.py4e.com/api/films/5/",
+                "https://swapi.py4e.com/api/films/6/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Naboo",
+            "periodo_orbital": "312",
+            "poblacion": "4500000000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/3/",
+                "https://swapi.py4e.com/api/people/21/",
+                "https://swapi.py4e.com/api/people/35/",
+                "https://swapi.py4e.com/api/people/36/",
+                "https://swapi.py4e.com/api/people/37/",
+                "https://swapi.py4e.com/api/people/38/",
+                "https://swapi.py4e.com/api/people/39/",
+                "https://swapi.py4e.com/api/people/42/",
+                "https://swapi.py4e.com/api/people/60/",
+                "https://swapi.py4e.com/api/people/61/",
+                "https://swapi.py4e.com/api/people/66/"
+            ],
+            "periodo_de_rotacion": "26",
+            "agua_superficial": "12",
+            "terreno": "grassy hills, swamps, forests, mountains",
+            "url": "https://swapi.py4e.com/api/planets/8/"
+        },
+        {
+            "clima": "temperate",
+            "creado": "2014-12-10T11:54:13.921000Z",
+            "diametro": "12240",
+            "editado": "2014-12-20T20:58:18.432000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/3/",
+                "https://swapi.py4e.com/api/films/4/",
+                "https://swapi.py4e.com/api/films/5/",
+                "https://swapi.py4e.com/api/films/6/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Coruscant",
+            "periodo_orbital": "368",
+            "poblacion": "1000000000000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/34/",
+                "https://swapi.py4e.com/api/people/55/",
+                "https://swapi.py4e.com/api/people/74/"
+            ],
+            "periodo_de_rotacion": "24",
+            "agua_superficial": "unknown",
+            "terreno": "cityscape, mountains",
+            "url": "https://swapi.py4e.com/api/planets/9/"
+        },
+        {
+            "clima": "temperate",
+            "creado": "2014-12-10T12:45:06.577000Z",
+            "diametro": "19720",
+            "editado": "2014-12-20T20:58:18.434000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/5/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Kamino",
+            "periodo_orbital": "463",
+            "poblacion": "1000000000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/22/",
+                "https://swapi.py4e.com/api/people/72/",
+                "https://swapi.py4e.com/api/people/73/"
+            ],
+            "periodo_de_rotacion": "27",
+            "agua_superficial": "100",
+            "terreno": "ocean",
+            "url": "https://swapi.py4e.com/api/planets/10/"
+        }
+    ]
+}
+```
+
+### Listar Peliculas
+
+#### Endpoint
+`Type: GET`
+`/dev/films`
+
+
+#### Respuesta
+`200 Success`
+```js
+{
+    "message": "Listado de planetas",
+    "data": [
+        {
+            "clima": "arid",
+            "creado": "2014-12-09T13:50:49.641000Z",
+            "diametro": "10465",
+            "editado": "2014-12-20T20:58:18.411000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/1/",
+                "https://swapi.py4e.com/api/films/3/",
+                "https://swapi.py4e.com/api/films/4/",
+                "https://swapi.py4e.com/api/films/5/",
+                "https://swapi.py4e.com/api/films/6/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Tatooine",
+            "periodo_orbital": "304",
+            "poblacion": "200000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/1/",
+                "https://swapi.py4e.com/api/people/2/",
+                "https://swapi.py4e.com/api/people/4/",
+                "https://swapi.py4e.com/api/people/6/",
+                "https://swapi.py4e.com/api/people/7/",
+                "https://swapi.py4e.com/api/people/8/",
+                "https://swapi.py4e.com/api/people/9/",
+                "https://swapi.py4e.com/api/people/11/",
+                "https://swapi.py4e.com/api/people/43/",
+                "https://swapi.py4e.com/api/people/62/"
+            ],
+            "periodo_de_rotacion": "23",
+            "agua_superficial": "1",
+            "terreno": "desert",
+            "url": "https://swapi.py4e.com/api/planets/1/"
+        },
+        {
+            "clima": "temperate",
+            "creado": "2014-12-10T11:35:48.479000Z",
+            "diametro": "12500",
+            "editado": "2014-12-20T20:58:18.420000Z",
+            "peliculas": [
+                "https://swapi.py4e.com/api/films/1/",
+                "https://swapi.py4e.com/api/films/6/"
+            ],
+            "gravedad": "1 standard",
+            "nombre": "Alderaan",
+            "periodo_orbital": "364",
+            "poblacion": "2000000000",
+            "residentes": [
+                "https://swapi.py4e.com/api/people/5/",
+                "https://swapi.py4e.com/api/people/68/",
+                "https://swapi.py4e.com/api/people/81/"
+            ],
+            "periodo_de_rotacion": "24",
+            "agua_superficial": "40",
+            "terreno": "grasslands, mountains",
+            "url": "https://swapi.py4e.com/api/planets/2/"
+        }
+    ]
 }
 ```
 
