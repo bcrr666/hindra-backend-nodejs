@@ -5,32 +5,36 @@ class PlanetService {
 
   async findById(id) {
 
-		try {
+    try {
 
-			const response = await axios.get(`https://swapi.py4e.com/api/planets/${id}`)
+      const response = await axios.get(`https://swapi.py4e.com/api/planets/${id}`)
       const planet = response.data
       return this.parsePlanet(planet)
 
-		} catch (error) {
+    } catch (error) {
+
       return error.response.status
-		} 
-    
-	}
+
+    } 
+  }
 
 	async list() {
 
-
-		try {
+    try {
       
       const response = await axios.get(`https://swapi.py4e.com/api/planets`)
       const planets = response.data.results
       return planets.map(planet => this.parsePlanet(planet));
+
     } catch (error) {
+
       return error.response.status
+
     } 
   }
 
 	parsePlanet(planet) {
+
 		return {
 			clima: planet.climate,
 			creado: planet.created,
@@ -47,6 +51,7 @@ class PlanetService {
 			terreno: planet.terrain,
 			url: planet.url
 		}
+    
 	}
 }
 

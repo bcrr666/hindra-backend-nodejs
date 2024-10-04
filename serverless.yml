@@ -1,9 +1,9 @@
 # "org" ensures this Service is used with the correct Serverless Framework Access Key.
 org: subastop
 # "app" enables Serverless Framework Dashboard features and sharing them with other Services.
-app: hindra
+app: indra
 # "service" is the name of this project. This will also be added to your AWS resource names.
-service: hindra
+service: indra
 
 provider:
   name: aws
@@ -25,4 +25,25 @@ functions:
     events:
       - httpApi:
           path: /planets/{id}
-          method: get          
+          method: get    
+
+  registerFilm:
+    handler: handler.registerFilm
+    events:
+      - httpApi:
+          path: /films
+          method: post
+
+  finndFilmById:
+    handler: handler.finndFilmById
+    events:
+      - httpApi:
+          path: /films/{id}
+          method: get           
+  
+  listFilms:
+    handler: handler.listFilms
+    events:
+      - http:
+          path: /films
+          method: get
